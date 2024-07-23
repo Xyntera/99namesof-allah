@@ -1,14 +1,22 @@
-const names = [
-    { arabic: "الرَّحْمَنُ", english: "Ar-Rahmaan", translation: "The Beneficent" },
-    { arabic: "الرَّحِيمُ", english: "Ar-Raheem", translation: "The Merciful" },
-    { arabic: "الْمَلِكُ", english: "Al-Malik", translation: "The King" },
-    // ... Add the rest of the 99 names here
+const namesOfAllah = [
+    "Ar-Rahman", "Ar-Raheem", "Al-Malik", "Al-Quddus", "As-Salam", "Al-Mu’min", "Al-Muhaymin", "Al-Aziz",
+    "Al-Jabbar", "Al-Mutakabbir", "Al-Khaliq", "Al-Bari", "Al-Musawwir", "Al-Ghaffar", "Al-Qahhar", "Al-Wahhab",
+    "Ar-Razzaq", "Al-Fattah", "Al-Alim", "Al-Qabid", "Al-Basit", "Al-Khafid", "Ar-Rafi", "Al-Mu’izz", "Al-Mudhill",
+    "As-Sami", "Al-Basir", "Al-Hakam", "Al-Adl", "Al-Latif", "Al-Khabir", "Al-Halim", "Al-Azim", "Al-Ghafur",
+    "Ash-Shakur", "Al-Ali", "Al-Kabir", "Al-Hafiz", "Al-Muqit", "Al-Hasib", "Al-Jalil", "Al-Karim", "Ar-Raqib",
+    "Al-Mujib", "Al-Wasi", "Al-Hakim", "Al-Wadud", "Al-Majid", "Al-Baith", "Ash-Shahid", "Al-Haqq", "Al-Wakil",
+    "Al-Qawiyy", "Al-Matin", "Al-Waliyy", "Al-Hamid", "Al-Muhsi", "Al-Mubdi", "Al-Muid", "Al-Muhyi", "Al-Mumit",
+    "Al-Hayy", "Al-Qayyum", "Al-Wajid", "Al-Majid", "Al-Wahid", "Al-Ahad", "As-Samad", "Al-Qadir", "Al-Muqtadir",
+    "Al-Muqaddim", "Al-Mu’akhkhir", "Al-Awwal", "Al-Akhir", "Az-Zahir", "Al-Batin", "Al-Wali", "Al-Muta’ali",
+    "Al-Barr", "At-Tawwab", "Al-Muntaqim", "Al-Afuww", "Ar-Rauf", "Malik-ul-Mulk", "Dhul-Jalal wal-Ikram",
+    "Al-Muqsit", "Al-Jami", "Al-Ghaniyy", "Al-Mughni", "Al-Mani", "Ad-Darr", "An-Nafi", "An-Nur", "Al-Hadi",
+    "Al-Badi", "Al-Baqi", "Al-Warith", "Ar-Rashid", "As-Sabur"
 ];
 
 const swiperWrapper = document.querySelector('.swiper-wrapper');
 
 async function fetchNatureImages() {
-    const apiKey = 'etGL44sHlofOXSmibQjtEemB0WJn9HTdqR3t66aPpY3Ltnlbjc6G9SZv';
+    const apiKey = 'YOUR_PEXELS_API_KEY';
     const url = `https://api.pexels.com/v1/search?query=nature&per_page=99`;
 
     try {
