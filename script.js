@@ -15,12 +15,16 @@ const namesOfAllah = [
     "Al-Badi", "Al-Baqi", "Al-Warith", "Ar-Rashid", "As-Sabur"
 ];
 
-const accessKey = 'z-qy0S5-_DkAGVty5ejLLu7ZYoop42_8imotzKDjerM';
+const accessKey = 'etGL44sHlofOXSmibQjtEemB0WJn9HTdqR3t66aPpY3Ltnlbjc6G9SZv';
 
 async function fetchRandomNatureImage() {
-    const response = await fetch(`https://api.unsplash.com/photos/random?query=nature&client_id=${accessKey}`);
+    const response = await fetch(`https://api.pexels.com/v1/search?query=nature&per_page=1`, {
+        headers: {
+            Authorization: accessKey
+        }
+    });
     const data = await response.json();
-    return data.urls.regular;
+    return data.photos[0].src.large;
 }
 
 const cardContainer = document.querySelector('.card-container .swiper-wrapper');
@@ -82,4 +86,3 @@ const swiper = new Swiper('.card-container', {
         }
     }
 });
-
