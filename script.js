@@ -16,7 +16,7 @@ const namesOfAllah = [
 const swiperWrapper = document.querySelector('.swiper-wrapper');
 
 async function fetchNatureImages() {
-    const apiKey = 'YOUR_PEXELS_API_KEY';
+    const apiKey = 'etGL44sHlofOXSmibQjtEemB0WJn9HTdqR3t66aPpY3Ltnlbjc6G9SZv';
     const url = `https://api.pexels.com/v1/search?query=nature&per_page=99`;
 
     try {
