@@ -18,7 +18,7 @@ const namesOfAllah = [
 const accessKey = 'etGL44sHlofOXSmibQjtEemB0WJn9HTdqR3t66aPpY3Ltnlbjc6G9SZv';
 
 async function fetchRandomNatureImage() {
-    const response = await fetch(`https://api.pexels.com/v1/search?query=nature&per_page=1`, {
+    const response = await fetch(`https://api.pexels.com/v1/search?query=nature&per_page=1&page=${Math.floor(Math.random() * 1000)}`, {
         headers: {
             Authorization: accessKey
         }
